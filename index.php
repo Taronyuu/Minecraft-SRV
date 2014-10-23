@@ -12,6 +12,10 @@ $dns = new cloudflareDomain;
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
+<!-- Created by Zander -->
+<!-- Contact http://zandervdm.nl -->
+<!-- Available for free @ https://github.com/Taronyuu/Minecraft-SRV -->
+<!-- Do not remove this! -->
 
 	<!-- Basic Page Needs
   ================================================== -->
