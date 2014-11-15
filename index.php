@@ -1,6 +1,6 @@
 <?php
 
-include_once("class.dns.php");
+require_once("class.dns.php");
 
 $dns = new cloudflareDomain;
 
