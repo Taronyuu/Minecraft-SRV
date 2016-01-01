@@ -12,7 +12,7 @@
     <!-- Basic Page Needs
   ================================================== -->
     <meta charset="utf-8">
-    <title>Minecraft - DNS</title>
+    <title>{{ env('SITE_NAME') }} - DNS</title>
     <meta name="description" content="MCPlay.pw is a free service that lets you remove your numerical ip and port and change it to yourname.mcplay.pw. It is free and will always stay free, no strings attached!">
     <meta name="author" content="Zander van der Meer">
 
@@ -41,7 +41,7 @@
 <body>
 <div class="container">
     <div class="sixteen columns">
-        <h1 style="margin-top: 40px"><?php echo "<a href=\"index.php\"> " . $dns->site_name . "</a>"; ?></h1>
+        <h1 style="margin-top: 40px"><a href=\"index.php\">{{ env('SITE_NAME') }}</a></h1>
         <hr />
     </div>
     <div class="sixteen columns">
@@ -53,23 +53,25 @@
                 <hr />
             </p>
 
-            @if(Session::get('success'))
-                <div class="alert alert-success" style="">
-                    {{ Session::get('success') }}
-                </div>
-            @endif
-            @if(Session::get('error'))
-                <div class="alert alert-danger" style="">
-                    {{ Session::get('error') }}
-                </div>
-            @endif
-            @if ($errors->has())
-                <div class="alert alert-danger" style="">
-                    @foreach ($errors->all() as $error)
-                        {{ $error }}<br>
-                    @endforeach
-                </div>
-            @endif
+            <div style="color: red">
+                @if(Session::get('success'))
+                    <div class="alert alert-success" style="color: green">
+                        {{ Session::get('success') }}
+                    </div>
+                @endif
+                @if(Session::get('error'))
+                    <div class="alert alert-danger" style="">
+                        {{ Session::get('error') }}
+                    </div>
+                @endif
+                @if ($errors->has())
+                    <div class="alert alert-danger" style="">
+                        @foreach ($errors->all() as $error)
+                            {{ $error }}<br>
+                        @endforeach
+                    </div>
+                @endif
+            </div>
 
             @yield('content')
 
