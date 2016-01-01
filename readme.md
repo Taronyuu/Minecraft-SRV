@@ -5,6 +5,8 @@ Allows users to create a SRV record for their Minecraft server from the web. It 
 
 You should change the HTML to something more appropriate.
 
+If you want the previous version (That isn't save to use!) so you don't have to use composer you can download it [here](https://github.com/Taronyuu/Minecraft-SRV/archive/48437302ab903f5289e2cfe705fde1048d9ba8f5.zip)
+
 ####Requirements
 You must use the DNS service from Cloudflare
 Webserver including PHP (5.5.9+)
